@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="Examen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="234"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="158" height="234"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlx-Cp-XLd">
+                        <rect key="frame" x="2" y="2" width="150" height="225"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-UT-eYB">
+                                <rect key="frame" x="40" y="5" width="70" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TV4-hX-1ep"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hNp-ks-VKc">
+                                <rect key="frame" x="5" y="110" width="140" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Doctor Strange en el multiverso de la locura" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-KF-X3d">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="38.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                        <color key="textColor" name="LightBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="06/05/2022" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-3f-uIr">
+                                        <rect key="frame" x="0.0" y="43.666666666666657" width="140" height="11"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                        <color key="textColor" name="LightBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-Kn-teZ">
+                                        <rect key="frame" x="0.0" y="59.666666666666657" width="140" height="50.333333333333343"/>
+                                        <string key="text">Doctor Strange, además de recibir ayuda de aliados místicos nuevos y otros ya conocidos, atraviesa las alucinantes y peligrosas realidades alternativas del Multiverso para enfrentarse a un nuevo y misterioso adversario.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                        <color key="textColor" name="LightBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Cells"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="5at-eH-kZn"/>
+                            <constraint firstItem="pYW-UT-eYB" firstAttribute="top" secondItem="Zlx-Cp-XLd" secondAttribute="top" constant="5" id="GZF-eC-NSD"/>
+                            <constraint firstItem="hNp-ks-VKc" firstAttribute="top" secondItem="pYW-UT-eYB" secondAttribute="bottom" constant="5" id="U3B-tw-8bW"/>
+                            <constraint firstAttribute="trailing" secondItem="hNp-ks-VKc" secondAttribute="trailing" constant="5" id="beH-2H-i7b"/>
+                            <constraint firstItem="pYW-UT-eYB" firstAttribute="leading" secondItem="Zlx-Cp-XLd" secondAttribute="leading" constant="40" id="isK-LC-Rvl"/>
+                            <constraint firstAttribute="height" constant="225" id="liq-NX-UZv"/>
+                            <constraint firstAttribute="trailing" secondItem="pYW-UT-eYB" secondAttribute="trailing" constant="40" id="qft-K0-Wnu"/>
+                            <constraint firstAttribute="bottom" secondItem="hNp-ks-VKc" secondAttribute="bottom" constant="5" id="t3I-vs-yLb"/>
+                            <constraint firstItem="hNp-ks-VKc" firstAttribute="leading" secondItem="Zlx-Cp-XLd" secondAttribute="leading" constant="5" id="yE1-Wf-66D"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Zlx-Cp-XLd" secondAttribute="trailing" constant="2" id="5dk-e1-wLn"/>
+                <constraint firstItem="Zlx-Cp-XLd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Ffc-qn-MG9"/>
+                <constraint firstItem="Zlx-Cp-XLd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="UeV-9L-bzk"/>
+                <constraint firstAttribute="bottom" secondItem="Zlx-Cp-XLd" secondAttribute="bottom" constant="2" id="kDd-Xr-k2t"/>
+            </constraints>
+            <size key="customSize" width="347" height="403"/>
+            <connections>
+                <outlet property="imgPoster" destination="pYW-UT-eYB" id="32W-QH-39T"/>
+                <outlet property="lblDateandDate" destination="HLL-3f-uIr" id="kr4-Zg-VtZ"/>
+                <outlet property="lblResume" destination="eWq-Kn-teZ" id="gfW-Jd-7bn"/>
+                <outlet property="lblTitle" destination="tAD-KF-X3d" id="0QW-pK-9gC"/>
+                <outlet property="vwContainer" destination="Zlx-Cp-XLd" id="qX1-6w-hGg"/>
+            </connections>
+            <point key="canvasLocation" x="340.45801526717554" y="109.85915492957747"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="poster" width="1280" height="1920"/>
+        <namedColor name="Cells">
+            <color red="0.094117647058823528" green="0.14901960784313725" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.37647058823529411" green="0.7803921568627451" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
