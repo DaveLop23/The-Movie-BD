@@ -37,6 +37,9 @@ class LoginViewController: BaseViewController {
         self.view.backgroundColor = UIColor(named: "DarkBlue")
         btnLogin.layer.cornerRadius = 5
         btnLogin.backgroundColor = .systemGray4
+        btnLogin.setTitle(String.Login.Login, for: .normal)
+        txtUser.placeholder = String.Login.User
+        txtPassword.placeholder = String.Login.Password
         
     }
     

@@ -31,6 +31,8 @@ extension String {
         static let Error401 = "Los datos ingresados no son correctos, por favor verifique su Usuario y/o Contraseña."
         static let CamposVacios = "Por favor ingrese su usuario y contraseña"
         static let Login = "Login"
+        static let User = "Usuario"
+        static let Password = "Contraseñas"
     }
     
     struct Home {

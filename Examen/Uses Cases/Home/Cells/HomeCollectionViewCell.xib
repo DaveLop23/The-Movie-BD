@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlx-Cp-XLd">
                         <rect key="frame" x="2" y="2" width="150" height="225"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-UT-eYB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-UT-eYB">
                                 <rect key="frame" x="40" y="5" width="70" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TV4-hX-1ep"/>
@@ -30,26 +30,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hNp-ks-VKc">
                                 <rect key="frame" x="5" y="110" width="140" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Doctor Strange en el multiverso de la locura" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-KF-X3d">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="38.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAD-KF-X3d">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="80.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                         <color key="textColor" name="LightBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="06/05/2022" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-3f-uIr">
-                                        <rect key="frame" x="0.0" y="43.666666666666657" width="140" height="11"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-3f-uIr">
+                                        <rect key="frame" x="0.0" y="85.333333333333343" width="140" height="11"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                         <color key="textColor" name="LightBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-Kn-teZ">
-                                        <rect key="frame" x="0.0" y="59.666666666666657" width="140" height="50.333333333333343"/>
-                                        <string key="text">Doctor Strange, además de recibir ayuda de aliados místicos nuevos y otros ya conocidos, atraviesa las alucinantes y peligrosas realidades alternativas del Multiverso para enfrentarse a un nuevo y misterioso adversario.</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-Kn-teZ">
+                                        <rect key="frame" x="0.0" y="101.33333333333334" width="140" height="8.6666666666666714"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                                        <color key="textColor" name="LightBlue"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Vip-uj-k18"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Cells"/>
@@ -86,7 +88,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="poster" width="1280" height="1920"/>
         <namedColor name="Cells">
             <color red="0.094117647058823528" green="0.14901960784313725" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

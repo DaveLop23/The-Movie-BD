@@ -15,7 +15,9 @@ class MovieDetailsViewController: BaseViewController {
     
     var dataMovieDetails: [MovieDetailsResponse]? = [] {
         didSet {
-            self.tableViewDetails.reloadData()
+            DispatchQueue.main.async {
+                self.tableViewDetails.reloadData()
+            }
         }
     }
     var idMovie: String? = ""
