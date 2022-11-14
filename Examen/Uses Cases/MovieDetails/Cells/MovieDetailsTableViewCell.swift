@@ -17,12 +17,13 @@ class MovieDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var lblSubtitle: UILabel!
     @IBOutlet weak var lblResume: UILabel!
     @IBOutlet weak var vwContainer: UIView!
-    
+    @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var lblDisponible: UILabel!
     @IBOutlet weak var lblTitleResume: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        lblHeader.text = String.MovieDetail.TitleDetalles
         imgPoster.layer.cornerRadius = 10
         imgPoster.layer.borderColor = UIColor.clear.cgColor
         vwContainer.layer.cornerRadius = 10
@@ -42,7 +43,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
             guard let weak = self else {return}
             if dataDetails?.count ?? 0 > 0 {
                 let path = dataDetails?[0].posterPath
-                let url = URL(string: "https://www.themoviedb.org/t/p/w1280/\(path ?? "" )")
+                let url = URL(string: "\(String.MovieDetail.urlPostr)\(path ?? "" )")
                 let data = try? Data(contentsOf: url!)
                 if let imageData = data {
                     let image = UIImage(data: imageData)
@@ -55,11 +56,11 @@ class MovieDetailsTableViewCell: UITableViewCell {
                 weak.lblResume.text = dataDetails?[0].overview
                 weak.lblSubtitle.text = dataDetails?[0].tagline
                 let generos: String = dataDetails?[0].genres?[0].name ?? ""
-                weak.lblGenrer.text = "Genero: \(generos)"
-                weak.lblTitleResume.text = "Resumen:"
+                weak.lblGenrer.text = "\(String.MovieDetail.Genero) \(generos)"
+                weak.lblTitleResume.text = String.MovieDetail.Resumen
                 
             } else {
-                let url = URL(string: "https://www.ferexpo.cl/images/contenido-no-disponible.jpg")
+                let url = URL(string: "\(String.MovieDetail.urlPosterNoDisponible)")
                 let data = try? Data(contentsOf: url!)
                 if let imageData = data {
                     let image = UIImage(data: imageData)
@@ -73,6 +74,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
                 weak.lblSubtitle.text = ""
                 let generos: String = ""
                 weak.lblGenrer.text = ""
+                
             }
         }
     }

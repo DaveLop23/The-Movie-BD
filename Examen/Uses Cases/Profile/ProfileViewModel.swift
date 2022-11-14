@@ -20,11 +20,11 @@ extension ProfileViewController {
             if let datos = response {
                 DispatchQueue.main.async {
                     self.vwLoader.isHidden = true
-                    self.lblUsername.text = "@\(datos.username ?? "")"
-                    self.lblName.text = "Nombre: \(datos.name ?? "")"
-                    self.lblPais.text = "Pais: \(datos.iso3166_1 ?? "")"
+                    self.lblUsername.text = "\(String.Profile.At)\(datos.username ?? "")"
+                    self.lblName.text = "\(String.Profile.Nombre) \(datos.name ?? "")"
+                    self.lblPais.text = "\(String.Profile.Pais) \(datos.iso3166_1 ?? "")"
                     let path = datos.avatar?.tmdb?.avatarPath ?? ""
-                    let url = URL(string: "https://www.themoviedb.org/t/p/w300_and_h300_face/\(path)")
+                    let url = URL(string: "\(String.Profile.urlAvatar)\(path)")
                     let data = try? Data(contentsOf: url!)
                     if let imageData = data {
                         let image = UIImage(data: imageData)

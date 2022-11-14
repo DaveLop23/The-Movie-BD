@@ -10,6 +10,28 @@ import Foundation
 extension HomeViewController {
     
     
+    func getSessionId() {
+        let token = requesTokenSessionId
+        debugPrint(token)
+        API.getSessionId(token:token).request(model: SessionResponse.self, handler: {response, error, statusCode in
+            if let response = response {
+                if response.success == true {
+                    let idSession = "\(response.sessionID ?? "")"
+                    debugPrint(idSession)
+                    self.idSession = idSession
+                } else {
+                    if let error = error {
+                        self.alerta(mensaje: error)
+                    }
+                    
+                }
+            }
+        })
+        
+    }
+    
+    
+    
     func getPopularMovies() {
         API.getPopular.request(model: MoviesResponse.self, handler: {response, error, statusCode in
             if let response = response {
@@ -48,7 +70,7 @@ extension HomeViewController {
             }
         })
     }
-
+    
     
     
 }

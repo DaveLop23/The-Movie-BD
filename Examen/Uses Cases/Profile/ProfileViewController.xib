@@ -16,6 +16,7 @@
                 <outlet property="imgProfile" destination="b92-CO-F3n" id="aw8-iG-2SK"/>
                 <outlet property="lblName" destination="wb6-Dg-wLJ" id="bZg-Xw-GaW"/>
                 <outlet property="lblPais" destination="VnT-Ex-aeQ" id="U6C-3h-J26"/>
+                <outlet property="lblTitle" destination="1nE-ZZ-KwQ" id="RdU-Zs-UL1"/>
                 <outlet property="lblUsername" destination="PHD-ly-0Sa" id="Vnx-np-xKX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vwHeader" destination="Cxi-j9-oc5" id="N0L-IK-pDQ"/>
@@ -30,7 +31,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="CY4-KZ-26S">
                     <rect key="frame" x="19.666666666666657" y="70" width="353.66666666666674" height="186"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nE-ZZ-KwQ">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nE-ZZ-KwQ">
                             <rect key="frame" x="0.0" y="0.0" width="353.66666666666669" height="36"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <color key="textColor" name="LightBlue"/>
@@ -83,7 +84,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Cerrar sesion"/>
+                    <state key="normal" title="Button"/>
                     <connections>
                         <action selector="actionLogOut:" destination="-1" eventType="touchUpInside" id="Ol1-2H-Jy0"/>
                     </connections>
@@ -149,6 +150,11 @@
                 <constraint firstItem="htg-dq-QMJ" firstAttribute="top" secondItem="CY4-KZ-26S" secondAttribute="bottom" constant="40" id="ok2-x6-7og"/>
                 <constraint firstItem="htg-dq-QMJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zoz-dL-wFb"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="htg-dq-QMJ"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="-10" y="20"/>
         </view>
     </objects>

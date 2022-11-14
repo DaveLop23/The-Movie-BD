@@ -72,7 +72,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEe-uR-Ozs">
                                         <rect key="frame" x="0.0" y="280" width="268" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" name="LightBlue"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -90,7 +90,7 @@
                             <constraint firstItem="5va-lX-IOe" firstAttribute="leading" secondItem="5YT-9O-l0E" secondAttribute="leading" constant="10" id="fqo-8t-73y"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acerca de esta película" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiN-aN-lvJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiN-aN-lvJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="l3K-l1-ucg"/>
@@ -117,6 +117,7 @@
                 <outlet property="imgPoster" destination="Wry-dL-qFR" id="VXs-0U-sAf"/>
                 <outlet property="lblDisponible" destination="o1M-eI-9qu" id="gLq-RZ-iod"/>
                 <outlet property="lblGenrer" destination="0b5-Zv-qHq" id="kH1-P0-zt3"/>
+                <outlet property="lblHeader" destination="wiN-aN-lvJ" id="HYd-Ca-MkY"/>
                 <outlet property="lblResume" destination="tEe-uR-Ozs" id="u87-Hr-lxB"/>
                 <outlet property="lblSubtitle" destination="3VF-eJ-qW6" id="Wgw-Vm-KxC"/>
                 <outlet property="lblTitle" destination="1c1-R2-m3f" id="TO0-1e-cao"/>

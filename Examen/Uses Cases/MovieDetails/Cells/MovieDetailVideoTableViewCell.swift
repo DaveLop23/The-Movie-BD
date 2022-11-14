@@ -43,6 +43,7 @@ class MovieDetailVideoTableViewCell: UITableViewCell {
                 weak.vwContainer.isHidden = true
                 weak.lblHeader.isHidden = true
             }
+            weak.lblHeader.text = String.MovieDetail.TitleAvances
             weak.lblTitle.text = videoName
         }
     }

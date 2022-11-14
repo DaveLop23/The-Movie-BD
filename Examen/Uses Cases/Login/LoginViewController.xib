@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="btnLogin" destination="plt-bC-yyg" id="LR3-GY-0pr"/>
                 <outlet property="lblError" destination="9HY-YQ-nx5" id="QHy-VG-PcP"/>
+                <outlet property="lblErrorServicio" destination="njU-sY-F8k" id="P8s-xI-fK7"/>
                 <outlet property="txtPassword" destination="90J-ZZ-P6w" id="yxh-DC-kd0"/>
                 <outlet property="txtUser" destination="f7v-OK-VzJ" id="PUj-as-ZmZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bsJ-yY-Zn9">
-                    <rect key="frame" x="59" y="375" width="275" height="230"/>
+                    <rect key="frame" x="59" y="375" width="275" height="290"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7v-OK-VzJ">
                             <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
@@ -59,6 +60,13 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-YQ-nx5">
                             <rect key="frame" x="0.0" y="180" width="275" height="50"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njU-sY-F8k">
+                            <rect key="frame" x="0.0" y="240" width="275" height="50"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                             <color key="textColor" systemColor="systemRedColor"/>
                             <nil key="highlightedColor"/>
@@ -133,10 +141,10 @@
         <image name="SplashLogo" width="256" height="256"/>
         <image name="background" width="1654" height="3721"/>
         <namedColor name="Cells">
-            <color red="0.098039209840000002" green="0.15294116739999999" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.094117647058823528" green="0.14901960784313725" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="LightBlue">
-            <color red="0.37647059560000001" green="0.78431367870000002" blue="0.4352940917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.37647058823529411" green="0.7803921568627451" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

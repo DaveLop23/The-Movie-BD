@@ -40,7 +40,9 @@ extension LoginViewController {
         
         let tokenStr = requestToken
         if userStr == "" || passStr == "" {
-            self.alerta(mensaje: "Por favor ingrese su usuario y contraseña")
+            self.lblError.isHidden = false
+            self.lblError.text = String.Login.CamposVacios
+            self.lblErrorServicio.isHidden = true
         } else {
             DispatchQueue.main.async {
                 self.vwLoader.isHidden = false
@@ -49,7 +51,9 @@ extension LoginViewController {
                 if let response = response {
                     if statusCode == 401 {
                         DispatchQueue.main.async {
-                            self.alerta(mensaje: "Los datos ingresados no son correctos, por favor verifique su Usuario y/o Contraseña.")
+                            self.lblErrorServicio.isHidden = false
+                            self.lblErrorServicio.text = String.Login.Error401
+                            self.lblError.isHidden = true
                             self.vwLoader.isHidden = true
                         }
                     }
@@ -58,14 +62,13 @@ extension LoginViewController {
                             self.vwLoader.isHidden = true
                             let token = "\(response.requestToken ?? "")"
                             self.requesTokenSessionId = token
-                            let vc = TabBarViewController()
-                            vc.tokenSessionId = "\(self.requesTokenSessionId)"
-                            debugPrint("\(self.requesTokenSessionId)")
+                            let vc = HomeViewController()
+                            vc.requesTokenSessionId = self.requesTokenSessionId
                             self.navigationController?.pushViewController(vc, animated: true)
                         }
                     } else if response.success == false {
                         if let error = error {
-                            self.alerta(mensaje: error)
+                            self.lblErrorServicio.text = error
                         }
                     }
                 }

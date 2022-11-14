@@ -30,6 +30,7 @@
 		A97FFB81291F31790095406B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97FFB7F291F31790095406B /* LoginViewController.xib */; };
 		A97FFB89291F4CB20095406B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97FFB87291F4CB20095406B /* HomeViewController.swift */; };
 		A97FFB8A291F4CB20095406B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97FFB88291F4CB20095406B /* HomeViewController.xib */; };
+		A994145D2922E3FF00BB6113 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A994145C2922E3FF00BB6113 /* String.swift */; };
 		A997107F292000F500CA5957 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A997107E292000F500CA5957 /* LoginViewModel.swift */; };
 		A997108129201B0300CA5957 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A997108029201B0300CA5957 /* HomeViewModel.swift */; };
 		A9971083292023BE00CA5957 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9971082292023BE00CA5957 /* ProfileViewModel.swift */; };
@@ -74,6 +75,7 @@
 		A97FFB7F291F31790095406B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A97FFB87291F4CB20095406B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A97FFB88291F4CB20095406B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A994145C2922E3FF00BB6113 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A997107E292000F500CA5957 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A997108029201B0300CA5957 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A9971082292023BE00CA5957 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -170,12 +172,8 @@
 		A97FFB70291F2FF30095406B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A94E17D32921B24E005612B6 /* RegisterTableViewCellProtocol.swift */,
-				A90CF885291F673C00A76D0B /* BaseViewController.swift */,
-				A9EBA25B2921A45E00D34619 /* CustomTableView.swift */,
+				A994145E2922EB7900BB6113 /* Extensions */,
 				A90CF884291F671200A76D0B /* Networking */,
-				A94E17D52921B28E005612B6 /* ConfigurarCeldaProtocol.swift */,
-				A96A31DB2922C92300169393 /* TabBarViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,6 +222,19 @@
 				A997108029201B0300CA5957 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A994145E2922EB7900BB6113 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A94E17D32921B24E005612B6 /* RegisterTableViewCellProtocol.swift */,
+				A90CF885291F673C00A76D0B /* BaseViewController.swift */,
+				A9EBA25B2921A45E00D34619 /* CustomTableView.swift */,
+				A94E17D52921B28E005612B6 /* ConfigurarCeldaProtocol.swift */,
+				A96A31DB2922C92300169393 /* TabBarViewController.swift */,
+				A994145C2922E3FF00BB6113 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A997108C2920637500CA5957 /* Cells */ = {
@@ -411,6 +422,7 @@
 				A99710852920268400CA5957 /* SessionResponse.swift in Sources */,
 				A9971087292026A300CA5957 /* AccountResponse.swift in Sources */,
 				A94E17D62921B28E005612B6 /* ConfigurarCeldaProtocol.swift in Sources */,
+				A994145D2922E3FF00BB6113 /* String.swift in Sources */,
 				A97FFB7A291F30570095406B /* GenerateToken.swift in Sources */,
 				A97FFB5F291F2DFE0095406B /* SceneDelegate.swift in Sources */,
 				A9A5492E2922953000618149 /* MovieDetailsResponse.swift in Sources */,

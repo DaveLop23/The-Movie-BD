@@ -13,6 +13,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var lblError: UILabel!
+    @IBOutlet weak var lblErrorServicio: UILabel!
     @IBOutlet weak var vwLoader: UIView!
     
     var requestToken: String = ""
@@ -23,13 +24,20 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         self.configUI()
         self.getToken()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.txtUser.text = nil
+        self.txtPassword.text = nil
+        loadViewIfNeeded()
     }
     
     func configUI(){
         self.view.backgroundColor = UIColor(named: "DarkBlue")
         btnLogin.layer.cornerRadius = 5
         btnLogin.backgroundColor = .systemGray4
+        
     }
     
     @IBAction func loginAction(_ sender: UIButton) {

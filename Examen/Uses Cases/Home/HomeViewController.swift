@@ -17,7 +17,8 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var sgmOption: UISegmentedControl!
     
     var cacheGeneral = ImageCachePosters()
-    
+    var requesTokenSessionId: String = ""
+    var idSession: String? = ""
     var responsePopular: [MoviesResponse] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -51,6 +52,7 @@ class HomeViewController: BaseViewController {
         self.getTopRatedMovies()
         self.navegationBarSetup()
         self.collectionViewSetup()
+        self.getSessionId()
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         sgmOption.setTitleTextAttributes(titleTextAttributes, for: .selected)
         sgmOption.setTitleTextAttributes(titleTextAttributes, for: .normal)
@@ -62,11 +64,11 @@ class HomeViewController: BaseViewController {
         self.view.backgroundColor = UIColor(named: "DarkBlue")
         self.navigationWhitoutItemButtonMenu()
         self.navigationItem.hidesBackButton = true
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"),
-//                                                                 style: .plain,
-//                                                                 target: self,
-//                                                                 action: #selector(rightHandAction))
-//        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "LightBlue")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.fill"),
+                                                                 style: .plain,
+                                                                 target: self,
+                                                                 action: #selector(rightHandAction))
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(named: "LightBlue")
     }
     
     func collectionViewSetup() {
@@ -89,14 +91,30 @@ class HomeViewController: BaseViewController {
         collectionViewTopRate.dataSource = self
     }
     
-//    @objc
-//    func rightHandAction() {
-//        let vc = ProfileViewController()
-//        vc.sessionId = self.idSession
-//        vc.modalPresentationStyle = .popover
-//        self.navigationController?.present(vc, animated: true)
-//    }
-//
+    @objc
+    func rightHandAction() {
+        
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let firstAction: UIAlertAction = UIAlertAction(title: String.Home.VerPerfil, style: .default) { action -> Void in
+            let vc = ProfileViewController()
+            vc.datos = self.idSession
+            vc.modalPresentationStyle = .popover
+            self.navigationController?.present(vc, animated: true)
+        }
+        
+        let secondAction: UIAlertAction = UIAlertAction(title: String.Home.Logout, style: .destructive) { action -> Void in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: String.Home.Cancelar, style: .cancel) { action -> Void in }
+        actionSheetController.addAction(firstAction)
+        actionSheetController.addAction(secondAction)
+        actionSheetController.addAction(cancelAction)
+        present(actionSheetController, animated: true) {
+            print("option menu presented")
+        }
+    }
+    
     @IBAction func actionSegmenControl(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {
@@ -104,7 +122,7 @@ class HomeViewController: BaseViewController {
             self.collectionViewPupular.isHidden = false
             self.collectionViewUpcoming.isHidden = true
             self.collectionViewTopRate.isHidden = true
-            self.lblTitle.text = "Populares"
+            self.lblTitle.text = String.Home.Popular
             self.loadViewIfNeeded()
             self.collectionViewPupular.reloadData()
             
@@ -113,7 +131,7 @@ class HomeViewController: BaseViewController {
             self.collectionViewPupular.isHidden = true
             self.collectionViewUpcoming.isHidden = false
             self.collectionViewTopRate.isHidden = true
-            self.lblTitle.text = "Proximos"
+            self.lblTitle.text = String.Home.Upcoming
             self.loadViewIfNeeded()
             self.collectionViewUpcoming.reloadData()
             
@@ -122,7 +140,7 @@ class HomeViewController: BaseViewController {
             self.collectionViewPupular.isHidden = true
             self.collectionViewUpcoming.isHidden = true
             self.collectionViewTopRate.isHidden = false
-            self.lblTitle.text = "Las mejores"
+            self.lblTitle.text = String.Home.ToRated
             self.loadViewIfNeeded()
             self.collectionViewTopRate.reloadData()
             

@@ -17,6 +17,7 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var lblPais: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var vwLoader: UIView!
+    @IBOutlet weak var lblTitle: UILabel!
     
     var datos: String? = ""
     var username: String = ""
@@ -47,7 +48,8 @@ class ProfileViewController: BaseViewController {
         imgProfile.layer.borderColor = UIColor.clear.cgColor
         imgProfile.layer.cornerRadius = imgProfile.frame.height/2
         imgProfile.clipsToBounds = true
-        
+      //  btnLogOut.setTitle(String.Profile.Button, for: .normal)
+        self.lblTitle.text = String.Profile.Title
     }
     
     @IBAction func actionLogOut(_ sender: Any) {
